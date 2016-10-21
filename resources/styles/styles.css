@@ -1,3 +1,21 @@
-h1 {
-  color: purple;
+@import url('https://fonts.googleapis.com/css?family=Faster+One');
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+header {
+  width: 100%;
+  background-color: green;
+}
+
+.app-title {
+  margin: 0;
+  text-align: center;
+  padding: 10px 25px;
+  font-family: 'Faster One', cursive;
+  font-size: 3em;
+  color: beige;
 }

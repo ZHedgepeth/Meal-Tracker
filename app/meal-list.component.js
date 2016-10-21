@@ -13,9 +13,13 @@ var MealListComponent = (function () {
     function MealListComponent() {
         this.clickSender = new core_1.EventEmitter();
         this.selectedDay = "all";
+        this.selectedCalories = "all";
     }
     MealListComponent.prototype.onDayChange = function (optionFromMenu) {
         this.selectedDay = optionFromMenu;
+    };
+    MealListComponent.prototype.onCaloriesChange = function (optionFromMenu) {
+        this.selectedCalories = optionFromMenu;
     };
     MealListComponent.prototype.editButtonClicked = function (mealToEdit) {
         this.clickSender.emit(mealToEdit);
@@ -31,7 +35,7 @@ var MealListComponent = (function () {
     MealListComponent = __decorate([
         core_1.Component({
             selector: 'meal-list',
-            template: "\n  <h3>Pick a day to find out what you ate</h3>\n  <select class=\"form-control\" (change)=\"onDayChange($event.target.value)\">\n    <option value=\"all\">Every Day</option>\n    <option value=\"monday\">Monday</option>\n    <option value=\"tuesday\">Tuesday</option>\n    <option value=\"wednesday\">Wednesday</option>\n    <option value=\"thursday\">Thursday</option>\n    <option value=\"friday\">Friday</option>\n    <option value=\"saturday\">Saturday</option>\n    <option value=\"sunday\">Sunday</option>\n  </select>\n  <div *ngFor=\"let currentMeal of childMealList | day:selectedDay\">\n    <meal-display [meal]=\"currentMeal\"></meal-display>\n    <button (click)=\"editButtonClicked(currentMeal)\" class=\"btn\">Edit</button>\n  "
+            template: "\n  <h3>Pick a day to find out what you ate</h3>\n  <select class=\"form-control\" (change)=\"onDayChange($event.target.value)\">\n    <option value=\"all\">Every Day</option>\n    <option value=\"monday\">Monday</option>\n    <option value=\"tuesday\">Tuesday</option>\n    <option value=\"wednesday\">Wednesday</option>\n    <option value=\"thursday\">Thursday</option>\n    <option value=\"friday\">Friday</option>\n    <option value=\"saturday\">Saturday</option>\n    <option value=\"sunday\">Sunday</option>\n  </select>\n  <h3>Find meals that contain less or greater than 500 calories</h3>\n  <select class=\"form-control\" (change)=\"onCaloriesChange($event.target.value)\">\n    <option value=\"all\">All meals</option>\n    <option value=\"less\">Less than 500 calories</option>\n    <option value=\"more\">Greater than 500 calories</option>\n  </select>\n  <div *ngFor=\"let currentMeal of childMealList | day:selectedDay | calories:selectedCalories\">\n    <meal-display [meal]=\"currentMeal\"></meal-display>\n    <button (click)=\"editButtonClicked(currentMeal)\" class=\"btn\">Edit</button>\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], MealListComponent);

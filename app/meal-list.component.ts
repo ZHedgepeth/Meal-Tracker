@@ -15,7 +15,13 @@ import { Meal } from './meal.model';
     <option value="saturday">Saturday</option>
     <option value="sunday">Sunday</option>
   </select>
-  <div *ngFor="let currentMeal of childMealList | day:selectedDay">
+  <h3>Find meals that contain less or greater than 500 calories</h3>
+  <select class="form-control" (change)="onCaloriesChange($event.target.value)">
+    <option value="all">All meals</option>
+    <option value="less">Less than 500 calories</option>
+    <option value="more">Greater than 500 calories</option>
+  </select>
+  <div *ngFor="let currentMeal of childMealList | day:selectedDay | calories:selectedCalories">
     <meal-display [meal]="currentMeal"></meal-display>
     <button (click)="editButtonClicked(currentMeal)" class="btn">Edit</button>
   `
@@ -27,6 +33,10 @@ export class MealListComponent {
   public selectedDay: string = "all";
   onDayChange(optionFromMenu) {
     this.selectedDay = optionFromMenu;
+  }
+  public selectedCalories: string = "all";
+  onCaloriesChange(optionFromMenu) {
+    this.selectedCalories = optionFromMenu;
   }
   editButtonClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);

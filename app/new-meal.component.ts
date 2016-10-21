@@ -7,7 +7,16 @@ import { Meal } from './meal.model';
     <h2>Add your meal below</h2>
     <div>
       <label>What day is it?</label>
-      <input class="form-control" #newDay>
+      <select class="form-control" #newDay>
+        <option value="all">Every Day</option>
+        <option value="monday">Monday</option>
+        <option value="tuesday">Tuesday</option>
+        <option value="wednesday">Wednesday</option>
+        <option value="thursday">Thursday</option>
+        <option value="friday">Friday</option>
+        <option value="saturday">Saturday</option>
+        <option value="sunday">Sunday</option>
+      </select>
       <label>Name of your meal:</label>
       <input class="form-control" #newName>
       <label>Enter some details about this meal</label>
