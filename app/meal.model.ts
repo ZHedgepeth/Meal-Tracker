@@ -1,3 +1,4 @@
+
 export class Meal {
   constructor(
     public day: string,
