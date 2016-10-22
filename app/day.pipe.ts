@@ -80,5 +80,8 @@ export class DayPipe implements PipeTransform {
       }
       return output;
     }
+    else {
+        return input;
+    }
   }
 }
