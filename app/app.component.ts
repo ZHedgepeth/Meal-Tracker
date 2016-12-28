@@ -7,11 +7,12 @@ import { Meal } from './meal.model';
   <header>
     <h1 class="app-title">GUMshoeCHEW</h1>
   </header>
-  <div class="container">
-    <meal-list
-      [childMealList]="masterMealList"
-      (clickSender)="showDetails($event)"
-    ></meal-list>
+    <div class="all-meals">
+        <meal-list
+          [childMealList]="masterMealList"
+          (clickSender)="showDetails($event)"
+        ></meal-list>
+    </div>
     <edit-meal
       [childSelectedMeal]="selectedMeal"
       (doneClickedSender)="finishedEditing()"
@@ -20,7 +21,7 @@ import { Meal } from './meal.model';
     <new-meal
       (newMealSender)="addMeal($event)"
     ></new-meal>
-  </div>
+
   `
 })
 

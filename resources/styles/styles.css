@@ -1,16 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Faster+One');
 
 body {
-  margin: 0;
-  padding: 0;
+  margin: 20px;
+  padding: 20px;
   color: #222;
+  background-color: #c7d8b3;
+}
+#calories {
+    width: 100px;
 }
 
+#details{
+    height: 80px;
+}
 header {
   width: 100%;
   background-color: green;
 }
+ .day {
+     border: black;
+     width: 30%;
 
+ }
+.add-meal-title{
+    border-width: medium;
+    border-color: black;
+    
+
+}
 .app-title {
   margin: 0;
   text-align: center;
@@ -18,4 +35,10 @@ header {
   font-family: 'Faster One', cursive;
   font-size: 3em;
   color: beige;
+}
+
+.btn
+.all-meals {
+    border: 10px;
+    border-color: green;
 }

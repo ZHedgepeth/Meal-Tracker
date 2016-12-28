@@ -4,8 +4,12 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'new-meal',
   template: `
-    <h2>Add your meal below</h2>
-    <div>
+
+    <div class= "add-meal-title">
+    <h2>ADD A MEAL:</h2>
+
+    <div class="day">
+
       <label>What day is it?</label>
       <select class="form-control" #newDay>
         <option value="all">Every Day</option>
@@ -20,9 +24,9 @@ import { Meal } from './meal.model';
       <label>Name of your meal:</label>
       <input class="form-control" #newName>
       <label>Enter some details about this meal</label>
-      <input class="form-control" #newDetails>
+      <input class="form-control" id="details" #newDetails>
       <label>Calories:</label>
-      <input class="form-control" #newCalories>
+      <input class="form-control" id="calories" placeholder="250" #newCalories>
     </div>
     <br>
     <button class="btn btn-info" (click)="
@@ -32,6 +36,7 @@ import { Meal } from './meal.model';
       newDetails.value='';
       newCalories.value='';
     ">ADD A MEAL</button>
+    </div>
   `
 })
 
