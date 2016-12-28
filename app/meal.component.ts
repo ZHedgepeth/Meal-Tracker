@@ -5,7 +5,7 @@ import { Meal } from './meal.model';
 @Component({
   selector: 'meal-display',
   template: `
-  <div>
+  <div class="display">
     <h2 (click)="showDetails()">{{ meal.name }}</h2>
     <div *ngIf="display === true">
       <ul class="list-group">

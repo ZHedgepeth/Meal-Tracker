@@ -5,11 +5,9 @@ import { Meal } from './meal.model';
   selector: 'new-meal',
   template: `
 
-    <div class= "add-meal-title">
-    <h2>ADD A MEAL:</h2>
-
+    <div id="add-meal">
+    <h2 id="add-meal-title">ADD A MEAL:</h2>
     <div class="day">
-
       <label>What day is it?</label>
       <select class="form-control" #newDay>
         <option value="all">Every Day</option>
