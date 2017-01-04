@@ -1,32 +1,19 @@
-##Angular Setup Checklist
-_*Create the project directory
+# Meal Tracker
 
-*Create index.html in the top level of the project directory.
+#### Angular2, NPM (backend), Bower(frontend)
 
-*Create package.json file for npm dependencies.
+#### Description
+_This repository contains a meal tracker program based on Angular 2. It uses NPM to manage backend packages and Bower for frontend. A user can save a name, description, weekday and calorie count for individual meals. The meals will be displayed. A user may click on a meal name to get more information. The user may also edit meal by clicking the pencil arrow.._
 
-*Run bower init to create the bower manifest file, keeping all the defaults.
+##### How to Use
+* _Fork or clone directory_
+* _Open terminal and navigate to local directory_
+* _Execute in terminal: npm install_
+* _Execute in terminal: bower install_
+* _Code as you wish!_
+* _If you wish to view: setup by - Execute in terminal: gulp build_
+* _If you wish to view - Execute in terminal: gulp serve_
 
-*Create .gitignore file.
-
-*Add resources folder, including subfolders for images, styles and js. Then add styles.css to the styles folder with a single obvious style rule to make sure the files are connected up correctly - for example, turn all the <h1> tags blue.
-
-*Create the app folder, and inside of it, add the root component: app.component.ts.
-
-*Also in the app folder, add the entry point files: app.module.ts and main.ts.
-
-*Create the Angular configuration files in the top level of your project directory: tsconfig.json, typings.json, and systemjs.config.js.
-Add gulpfile.js to the top level of your project directory.
-
-*Install any bower dependencies, such as Bootstrap.
-
-*Run the 4 development commands._
-
-##Development Commands
-_*npm install
-*bower install
-*gulp build
-*gulp serve_
-
-##Troubleshooting
-If the above steps have been completed and there are still errors relating to dependencies, try deleting the node_modules and bower_components folders and then rerunning the npm and bower install commands.
+##### Licence
+_License Copyright (c) 2016 Zach Hedgepeth_
+_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
